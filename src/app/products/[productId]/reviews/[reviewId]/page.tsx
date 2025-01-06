@@ -3,11 +3,11 @@ import React from 'react';
 export default function ReviewDetail({
  params,
 }: {
- params: { id: string; reviewId: string };
+ params: { productId: string; reviewId: string };
 }) {
  return (
   <h3>
-   Review {params.reviewId} for product {params.id}
+   Review {params.reviewId} for product {params.productId}
   </h3>
  );
 }
