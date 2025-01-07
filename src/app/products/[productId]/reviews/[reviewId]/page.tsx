@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import { notFound } from 'next/navigation';
 
 function getRandomInt(count: number) {
