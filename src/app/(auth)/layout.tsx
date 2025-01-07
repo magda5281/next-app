@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const navLinks = [
  { name: 'Register', href: '/register' },
@@ -14,6 +15,7 @@ export default function AuthLayout({
  children: React.ReactNode;
 }) {
  const pathname = usePathname();
+ const [input, setInput] = useState('');
 
  return (
   <div>
@@ -30,6 +32,10 @@ export default function AuthLayout({
      </Link>
     );
    })}
+   {/* layout preserves the state for all its child pages */}
+   <div>
+    <input value={input} onChange={(e) => setInput(e.target.value)} />
+   </div>
    {children}
   </div>
  );
