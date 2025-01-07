@@ -32,7 +32,7 @@ export default function AuthLayout({
      </Link>
     );
    })}
-   {/* layout preserves the state for all its child pages */}
+   {/* layout preserves the state for all its child pages template does not*/}
    <div>
     <input value={input} onChange={(e) => setInput(e.target.value)} />
    </div>
